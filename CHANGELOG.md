@@ -1,7 +1,7 @@
 # Changelog
 Learn more about the philosophy and format of this file in [VERSIONING](./VERSIONING.md)
 
-## `[EDGE]` Logging - to be version 0.1.0
+## Logging - version 0.1.0
 
 ### Added
 `+ Source files are now organised into namespaces. Directory structure reflects C# namespaces.`  
