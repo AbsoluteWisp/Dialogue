@@ -21,8 +21,9 @@ public static class Logger {
 	};
 
 	static readonly Dictionary<MessageSource, string> sourceNames = new() {
-		{ MessageSource.Unknown, "nosource" },
-		{ MessageSource.Core,    "core    " }
+		{ MessageSource.Unknown,     "nosource" },
+		{ MessageSource.Core,        "core    " },
+		{ MessageSource.Commandline, "cmdline " }
 	};
 	
 	public static void Log(string message, MessageSource source = MessageSource.Unknown, MessageSeverity severity = MessageSeverity.Debug) {
