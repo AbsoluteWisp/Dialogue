@@ -8,7 +8,7 @@ Learn more about the philosophy and format of this file in [VERSIONING](./VERSIO
 `+` New message source created: `Commandline`  
 `^+` `ArgumentManager` static class with methods for handling command line arguments  
 `^+` `Parse` static method for loading an array of command line arguments into a dictionary of keyword arguments  
-`^+` `Validate` static method for checking the validity of specified arguments (presence of required arguments, malformed arguments that don't match any supported option, invalid argument values), issuing errors for invalid required arguments and warnings for invalid optional arguments  
+`^+` `Validate` static method for checking the validity of the loaded dictionary (presence of required arguments, malformed arguments that don't match any supported option, invalid argument values), issuing errors for invalid required arguments and warnings for invalid optional arguments  
 `^+` `GetArgumentOrDefault` retrieves the value of an argument if it's valid, or a default value otherwise.
 
 ### Changed
