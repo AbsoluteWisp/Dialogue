@@ -1,5 +1,8 @@
 ﻿using System;
 
+using Dialogue.Commandline;
+using Dialogue.Logging;
+
 namespace Dialogue;
 
 public class Dialogue {
@@ -8,13 +11,13 @@ public class Dialogue {
 
 	public static void Main(string[] args) {
 		try {
-			Logging.Logger.Log($"Dialogue {version} ({branch})", Logging.MessageSource.Core, Logging.MessageSeverity.Info);
-			Logging.Logger.Log("Help and source code: https://github.com/AbsoluteWisp/Dialogue", Logging.MessageSource.Core, Logging.MessageSeverity.Info);
+			Logger.Log($"Dialogue {version} ({branch})", MessageSource.Core, MessageSeverity.Info);
+			Logger.Log("Help and source code: https://github.com/AbsoluteWisp/Dialogue", MessageSource.Core, MessageSeverity.Info);
 
-			
+			ArgumentManager.Parse(args);
 		}
 		catch (Exception e) {
-			Logging.Logger.Log(e, Logging.MessageSource.Unknown, Logging.MessageSeverity.Fatal);
+			Logger.Log(e, MessageSource.Unknown, MessageSeverity.Fatal);
 			Environment.Exit(1);
 		}
 	}
