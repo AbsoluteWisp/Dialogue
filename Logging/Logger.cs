@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
 
+using Dialogue.Commandline;
+
 namespace Dialogue.Logging;
 
 public static class Logger {
@@ -28,8 +30,12 @@ public static class Logger {
 	
 	public static void Log(string message, MessageSource source = MessageSource.Unknown, MessageSeverity severity = MessageSeverity.Debug) {
 		string line = $"< {severityNames[severity]} |{sourceNames[source]} | {message}";
-		
-		ColorWriteLine(severityColors[severity], line.TrimEnd());
+
+		// Uncomment to display severity details for every evaluated message
+		// Console.WriteLine($"< idk   |logger   | MessageSev={(int)severity}, MinimalSev={ArgumentManager.GetArgument("loglevel")}");
+
+		if ((int)severity >= int.Parse(ArgumentManager.GetArgument("loglevel")))
+			ColorWriteLine(severityColors[severity], line.TrimEnd());
 	}
 
 	public static void Log(Exception e, MessageSource source = MessageSource.Unknown, MessageSeverity severity = MessageSeverity.Error) {

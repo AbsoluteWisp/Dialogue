@@ -15,6 +15,7 @@ public class Dialogue {
 			Logger.Log("Help and source code: https://github.com/AbsoluteWisp/Dialogue", MessageSource.Core, MessageSeverity.Info);
 
 			ArgumentManager.Parse(args);
+			Logger.Log("Intitalised argparser", MessageSource.Core, MessageSeverity.Debug);
 		}
 		catch (Exception e) {
 			Logger.Log(e, MessageSource.Unknown, MessageSeverity.Fatal);

@@ -1,5 +1,9 @@
 public enum ArgumentType {
+	// Universal types
 	Integer,
 	Boolean,
-	String
+	String,
+
+	// Specialised types
+	LogLevel
 }
