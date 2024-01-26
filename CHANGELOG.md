@@ -1,7 +1,7 @@
 # Changelog
 Learn more about the philosophy and format of this file in [VERSIONING](./VERSIONING.md)
 
-## \[EDGE\] ArgParser - to be version 0.2.0
+## ArgParser - version 0.2.0
 
 ### Added
 `+` New namespace created: `Dialogue.Commandline`  
