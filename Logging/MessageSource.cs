@@ -6,4 +6,5 @@ namespace Dialogue.Logging;
 public enum MessageSource {
 	Unknown,
 	Core,
+	Commandline
 }

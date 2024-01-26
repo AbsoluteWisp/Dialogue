@@ -21,7 +21,8 @@ The different change types are:
 - `Deprecated` `~` to denote a feature to be removed in a future release
 - `Removed` `-` to denote a feature that has just been removed
 
-To further increase legibility, every change starts with a symbol specific for its change type. Every change is written in an inline code tag (`` `~ like this deprecation here` ``)
+For consistency, every change is described either as an object ("New enumeration to describe something") or as a statement ("The program will now do A instead of B").  
+To further increase legibility, every change starts with a symbol specific for its change type. Every change is written in plain text, with the starting symbol as inline code ("`~` Deprecate something")
 
 ## Example regular block
 ```md

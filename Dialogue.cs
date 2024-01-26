@@ -1,20 +1,25 @@
 ﻿using System;
 
+using Dialogue.Commandline;
+using Dialogue.Logging;
+
 namespace Dialogue;
 
 public class Dialogue {
-	const string branch = "logging";
-	const string version = "0.1.0";
+	const string branch = "argparser";
+	const string version = "0.2.0";
 
 	public static void Main(string[] args) {
 		try {
-			Logging.Logger.Log($"Dialogue {version} ({branch})", Logging.MessageSource.Core, Logging.MessageSeverity.Info);
-			Logging.Logger.Log("Help and source code: https://github.com/Ghostling225/Dialogue", Logging.MessageSource.Core, Logging.MessageSeverity.Info);
+			Logger.Log($"Dialogue {version} ({branch})", MessageSource.Core, MessageSeverity.Info);
+			Logger.Log("Help and source code: https://github.com/AbsoluteWisp/Dialogue", MessageSource.Core, MessageSeverity.Info);
 
-			throw new ArithmeticException("Example arithmetic exception");
+			ArgumentManager.Parse(args);
+			Logger.Log("Intitalised argparser", MessageSource.Core, MessageSeverity.Debug);
 		}
 		catch (Exception e) {
-			Logging.Logger.Log(e, Logging.MessageSource.Unknown, Logging.MessageSeverity.Fatal);
+			Logger.Log(e, MessageSource.Unknown, MessageSeverity.Fatal);
+			Environment.Exit(1);
 		}
 	}
 }
